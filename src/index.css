@@ -1,0 +1,137 @@
+body::-webkit-scrollbar{
+    /*display: none;*/
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+                                                       /*Hero Section*/
+
+
+#hero{
+    width:100%;
+    height:auto;
+    position: relative;
+    z-index: 1;
+}              
+
+#hero #parent{
+    position: relative;
+    height:1400vh;
+    width: 100%;
+}
+
+#canvas-container{
+    width:100%;
+    height: 100vh;
+    position: sticky;
+    top:0;
+    left:0;
+}
+
+#canvas-container canvas{
+    height:100%;
+    width:100%;
+}
+
+/*Text Section*/
+h1{
+    position: absolute;
+        top:10%;
+        left:5%;
+    z-index: 2;
+    color:blue;
+    font-size: 10rem;
+    padding:1rem;
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 2rem;
+    line-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#count-btn-container{
+    position:absolute;
+    z-index: 2;
+    color: white;
+    top:10%;
+    left:10%;
+    font-size: 4rem;
+    transform: translateY(150%);
+    display: flex;
+    justify-content: space-between;
+    gap:40rem;
+}
+
+#count-btn-container span{
+    font-size:x-large;
+    margin-top: 10%;
+    margin-bottom: 90%;
+    padding:1rem;
+    border: 3px solid white;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#count-btn-container span::after,#count-btn-container span::before{
+content: "";
+position: absolute;
+height:15rem;
+width:150%;
+background-color: white;
+z-index: -1;
+top:150%;
+left:50%;
+transform: translateX(-50%);
+transition: top 0.9s ease;
+border-radius: 40%;
+}
+
+#count-btn-container span::before{
+    background-color: rgba(255, 255, 255, 0.384);
+    animation: wave 6s linear infinite;
+}
+
+#count-btn-container span::after{
+    background-color: beige;
+    animation: wave 9s linear infinite;
+    border-radius: 45%;
+}
+
+#count-btn-container span:hover{
+    color:black;
+    cursor: pointer;
+}
+
+
+#count-btn-container span:hover::before{
+    top:-100%;
+}
+
+
+#count-btn-container span:hover::after{
+    top:-100%;
+}
+
+@keyframes wave{
+    from{
+        transform: translateX(-40%) rotate(0deg);
+    }
+    to{
+        transform:translateX(-60%) rotate(360deg)
+    }
+}
+
+
+/*Count Component*/
+
+#count-container h5{
+color:aqua;
+font-size: xx-large;
+}

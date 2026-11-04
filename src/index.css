@@ -9,7 +9,7 @@ body::-webkit-scrollbar{
 }
 
 
-                                                       /*Hero Section*/
+                                                       /*Hero Section Starts Here*/
 
 
 #hero{
@@ -128,10 +128,275 @@ border-radius: 40%;
     }
 }
 
-
 /*Count Component*/
-
 #count-container h5{
 color:aqua;
 font-size: xx-large;
 }
+
+
+                                           /*Hero Section Ends Here*/
+
+                                           /*Fecalty Section Starts Here*/
+
+
+#fecalty-container{
+display: flex;
+position: relative;
+height:25rem;
+width: 100%;
+}
+
+#fecalty-container>div{
+    background-color:azure;
+    width:62%;
+    height: 100%;
+    z-index: 3;
+    border-top-right-radius: inset 2rem;
+    clip-path: polygon(0 0,100% 0,80% 100%,0 100%);
+    position: absolute;
+    box-shadow: 2px 8px 2px gray;
+}
+
+#fecalty-container>div span{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#fecalty-container>div span::after{
+    content: attr(data-name);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color:white;
+    font-size: bold;
+    font-size: medium;
+    opacity: 0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 4;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fecalty-container>div span:hover::after{
+    opacity: 1;
+    transition: 0.4s ease;
+    animation: slide-from-up 1s linear;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@keyframes slide-from-up{
+    from{
+        transform: translateY(-200%);
+    }
+  
+}
+
+#fecalty-container>video{
+    margin-left: 47%;
+}
+
+
+                                            /*Fecalty Section Ends Here*/
+
+                                            /*Docorts Section Starts Here*/
+
+
+#doctors-container h3{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+#crousal-container{
+    width:100%;
+    height:47rem;
+    margin: auto;
+    perspective: 3000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#doctors-container video{
+    width:100%;
+    height:125%;
+    position: absolute;
+left:50%;
+transform: translateX(-50%);
+}
+
+#crousal-stage{
+margin-top:25%;
+margin-left: auto;
+margin-right: auto;
+width:90%;
+height:100%;
+position:relative;
+transform-style:preserve-3d;
+animation: spin 100s linear infinite;
+transition: transform 0.8s ease;
+}
+
+@keyframes spin {
+    from{
+        transform: rotateY(0deg);
+    }
+     to{
+        transform: rotateY(360deg);
+     }
+}
+
+.doctor-cards{
+    position:absolute;
+    height:fit-content;
+    width:15%;
+    left:42.2%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    background-color:rgba(56, 55, 55, 0.164);
+    backdrop-filter:blur(5px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 8px 4px rgb(6, 62, 145);;
+    border-radius: 0.5rem;
+}
+
+.doctor-cards:hover{
+width:17%;
+transition:0.5s ease;
+}
+
+.doctor-cards img{
+    width: 100%;
+ border-radius: 0.5rem;
+}
+
+.doctor-cards p:first-of-type{
+    margin-top: 0.5rem;
+    margin-left:5%;
+    color:rgb(199, 197, 197);
+}
+
+.doctor-cards p:nth-child(3){
+    color:white;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1rem auto;
+}
+
+.doctor-cards p:last-of-type{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-top: 2px solid rgb(92, 90, 90);
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(3, 3, 66);
+}
+
+
+.doctor-cards span{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding:0.8rem 0.3rem;
+    border: 4px solid white;
+    color:white;
+    font-size: medium;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.doctor-cards span::after,.doctor-cards span::before{
+    content: "";
+   position: absolute;
+   width: 150%;
+   height:12rem;
+   background-color: white;
+   border-radius: 40%;
+   top:100%;
+   left:50%;
+   transform: translateX(-50%);
+   z-index: -1;
+   transition: 0.8s ease;
+}
+
+.doctor-cards span::before{
+    border-radius: 45%;
+    background-color: rgb(201, 200, 200);
+    animation: wave 6s linear infinite;
+}
+
+.doctor-cards span::before{
+    animation: wave 9s linear infinite;
+}
+
+
+.doctor-cards span:hover{
+    cursor: pointer;
+    color:rgb(3, 3, 66);
+}
+
+.doctor-cards span:hover::after{
+top:-100%;
+}
+
+.doctor-cards span:hover::before{
+top:-100%;
+}
+
+
+                                            /*Doctors Section Ends Here*/
+
+                                           /*Location Section Starts Here*/
+
+
+#map-section{
+    margin-bottom:10rem;
+}                                            
+
+#map-section h3{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+#map-section>div{
+    width:70%;
+    height:30rem;
+    margin: auto;
+    border-radius:2rem;
+    padding:2rem;
+    background-color:rgb(30, 30, 209);
+    box-shadow:2px 2px 8px 4px gray,-2px -2px 8px 4px gray;
+    animation:color-wave 10s linear infinite;
+}
+
+#map-section>div>div{
+    height:100%;
+    width:100%;
+    border-radius:2rem;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    background-color:rgb(19, 19, 85);
+}
+
+
+
+
+                                           /*Location Section Ends Here*/

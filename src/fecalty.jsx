@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import HC from './assets/hc.mp4'
 

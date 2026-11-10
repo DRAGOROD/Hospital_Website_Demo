@@ -1,9 +1,6 @@
-import React from 'react'
-
 import DocBg from './assets/db.mp4'
 
 function Doctors(){
-
 
 const doctors = [
   {
@@ -78,21 +75,6 @@ const doctors = [
   }
 ];
 
-    
-  {/*return (
-    <div id='doctors-container'>
-      <h3>Our Specalists</h3>
-      <div id="crousal-container">
-        {doctors.map((v,i)=>
-        <div className='doctor-cards' key={i}>
-           <img src={v.picture} alt={v.name}/>
-           <p>{v.specialization}</p>
-           <p>{v.experience} Years</p>
-           <span>Book an Appoiniment</span>
-        </div>)}
-      </div>
-    </div>
-  )*/}
   return (
     <div id='doctors-container'>
       <h3>Our Specalists</h3>
@@ -100,7 +82,7 @@ const doctors = [
       <div id="crousal-container">
         <div id="crousal-stage">
         {doctors.map((v,i)=>
-        <div className='doctor-cards' key={i} style={{transform:`rotateY(${i * (360 / doctors.length)}deg) translateZ(550px)`}}>
+        <div className='doctor-cards' key={i} style={{transform:`rotateY(${i * (360 / doctors.length)}deg) translateZ(var(--crousal-dept))`}}>
            <img src={v.picture} alt={v.name}/>
            <p>{v.specialization}</p>
            <p>{v.name}</p>

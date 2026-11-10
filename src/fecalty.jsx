@@ -44,6 +44,8 @@ let fCards=[
 ]
 
   return (
+    <>
+    <h3>Facilities We Offer</h3>
     <div id='fecalty-container'>
         <div>
            {fCards.map((v,i)=>
@@ -54,6 +56,7 @@ let fCards=[
         </div>
         <video src={HC} playsInline autoPlay loop width={720}/>
     </div>
+    </>
   )
 }
 

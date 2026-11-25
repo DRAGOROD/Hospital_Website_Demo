@@ -1,16 +1,45 @@
-# React + Vite
+Here's a Hospital Website built with React that provides users with an interactive platform to explore hospital facilities, discover medical specialists, learn about healthcare services, and find hospital locations. The project focuses on creating an immersive healthcare experience through scroll-controlled background animations, interactive doctor cards, animated hero sections, hospital video backgrounds, facility showcases, interactive maps, and a modern navigation interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⭐ Project Link: https://dragorod.github.io/Hospital_Website_Demo/
 
-Currently, two official plugins are available:
+https://github.com/user-attachments/assets/016775e6-8a49-4995-a427-c3bf28589236
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tools & Technologies Used
+- React
+- JavaScript
+- HTML
+- CSS
+- GSAP
+- GSAP ScrollTrigger
+- Lenis
+- MapLibre GL JS
+- OpenFreeMap
+- Git
+- Vite
 
-## React Compiler
+## ✨ Features
+- GSAP-powered scroll animations
+- Animated hero text transitions
+- Animated statistics counters
+- Hospital facilities showcase
+- Hospital video backgrounds
+- 3D rotating doctors carousel
+- Interactive hospital location map
+- Map zoom and fullscreen controls
+- Animated dropdown navigation menus
+- Scroll progress bar
+- Responsive layout for desktop, tablet, and mobile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Future Improvements
+- Add doctor profile and details pages
+- Add appointment management system
+- Add online consultation functionality
+- Add appointment scheduling and availability
+- Add patient medical records management
+- Add department-wise doctor filtering
+- Add hospital services and treatment details
+- Add patient testimonials and reviews
+- Add contact and enquiry form submissions
+- Add email and SMS appointment notifications
+- Integrate a backend and database
+- Improve accessibility and mobile responsiveness
